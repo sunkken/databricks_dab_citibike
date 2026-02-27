@@ -18,9 +18,15 @@ dev = [
     "ipython==9.10.0",
     "debugpy==1.8.20",
 ]
-spark = [
-    # Dependencies for spark-only local development (e.g., pyspark)
-    # Add here when needed
+pyspark = [
+    "pyspark==4.0.1",
+    "pandas==3.0.1",
+    "pyarrow==23.0.1",
+    "numpy==2.4.2",
+    "py4j==0.10.9.9",
+    "grpcio==1.78.0",
+    "grpcio-status==1.78.0",
+    "googleapis-common-protos==1.72.0",
 ]
 
 [project.scripts]

@@ -28,7 +28,7 @@ If you're developing with an IDE, dependencies for this project should be instal
    ```
    UV_PROJECT_ENVIRONMENT=.venv_dbc uv sync --group dev
    ```
-   This creates a `.venv_dbc` directory with all dependencies.
+   This creates a `.venv_dbc` directory with all databricks connect environment dependencies defined in `pyproject.toml`.
    
 *  To activate the environment:
    ```
@@ -37,6 +37,20 @@ If you're developing with an IDE, dependencies for this project should be instal
    ```
 
 You can also use `UV_PROJECT_ENVIRONMENT=.venv_dbc uv run <command>` to run commands directly without activating the environment.
+
+For a separate local PySpark environment, run:
+
+```
+UV_PROJECT_ENVIRONMENT=.venv_pyspark uv sync --only-group pyspark
+```
+
+This creates `.venv_pyspark` with the local PySpark environment dependencies defined in `pyproject.toml`.
+To activate it:
+
+```
+source .venv_pyspark/bin/activate  # On macOS/Linux
+.venv_pyspark\Scripts\activate   # On Windows
+```
 
 
 # Using this project using the CLI
