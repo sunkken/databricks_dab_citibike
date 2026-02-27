@@ -4,13 +4,15 @@ version = "0.0.1"
 authors = [{ name = "sunqmasa@gmail.com" }]
 requires-python = ">=3.12,<3.13"
 dependencies = [
-    "databricks-connect==17.3",
     "pandas==3.0.1",
     "numpy==2.4.2",
     "pyarrow==23.0.1",
 ]
 
 [dependency-groups]
+dbc = [
+    "databricks-connect==17.3",
+]
 dev = [
     "pytest==9.0.2",
     "ruff",
@@ -20,9 +22,6 @@ dev = [
 ]
 pyspark = [
     "pyspark==4.0.1",
-    "pandas==3.0.1",
-    "pyarrow==23.0.1",
-    "numpy==2.4.2",
     "py4j==0.10.9.9",
     "grpcio==1.78.0",
     "grpcio-status==1.78.0",

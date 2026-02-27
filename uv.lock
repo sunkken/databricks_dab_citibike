@@ -144,13 +144,15 @@ name = "dab-project"
 version = "0.0.1"
 source = { editable = "." }
 dependencies = [
-    { name = "databricks-connect" },
     { name = "numpy" },
     { name = "pandas" },
     { name = "pyarrow" },
 ]
 
 [package.dev-dependencies]
+dbc = [
+    { name = "databricks-connect" },
+]
 dev = [
     { name = "debugpy" },
     { name = "ipykernel" },
@@ -162,22 +164,19 @@ pyspark = [
     { name = "googleapis-common-protos" },
     { name = "grpcio" },
     { name = "grpcio-status" },
-    { name = "numpy" },
-    { name = "pandas" },
     { name = "py4j" },
-    { name = "pyarrow" },
     { name = "pyspark" },
 ]
 
 [package.metadata]
 requires-dist = [
-    { name = "databricks-connect", specifier = "==17.3" },
     { name = "numpy", specifier = "==2.4.2" },
     { name = "pandas", specifier = "==3.0.1" },
     { name = "pyarrow", specifier = "==23.0.1" },
 ]
 
 [package.metadata.requires-dev]
+dbc = [{ name = "databricks-connect", specifier = "==17.3" }]
 dev = [
     { name = "debugpy", specifier = "==1.8.20" },
     { name = "ipykernel", specifier = "==7.2.0" },
@@ -189,10 +188,7 @@ pyspark = [
     { name = "googleapis-common-protos", specifier = "==1.72.0" },
     { name = "grpcio", specifier = "==1.78.0" },
     { name = "grpcio-status", specifier = "==1.78.0" },
-    { name = "numpy", specifier = "==2.4.2" },
-    { name = "pandas", specifier = "==3.0.1" },
     { name = "py4j", specifier = "==0.10.9.9" },
-    { name = "pyarrow", specifier = "==23.0.1" },
     { name = "pyspark", specifier = "==4.0.1" },
 ]
 
