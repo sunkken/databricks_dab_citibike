@@ -2,22 +2,25 @@
 name = "dab_project"
 version = "0.0.1"
 authors = [{ name = "sunqmasa@gmail.com" }]
-requires-python = ">=3.10,<3.13"
+requires-python = ">=3.12,<3.13"
 dependencies = [
-    # Any dependencies for jobs and pipelines in this project can be added here
-    # See also https://docs.databricks.com/dev-tools/bundles/library-dependencies
-    #
-    # LIMITATION: for pipelines, dependencies are cached during development;
-    # add dependencies to the 'environment' section of your pipeline.yml file instead
+    "databricks-connect==17.3",
+    "pandas==3.0.1",
+    "numpy==2.4.2",
+    "pyarrow==23.0.1",
 ]
 
 [dependency-groups]
 dev = [
-    "pytest",
+    "pytest==9.0.2",
     "ruff",
-    "databricks-dlt",
-    "databricks-connect>=15.4,<15.5",
-    "ipykernel",
+    "ipykernel==7.2.0",
+    "ipython==9.10.0",
+    "debugpy==1.8.20",
+]
+spark = [
+    # Dependencies for spark-only local development (e.g., pyspark)
+    # Add here when needed
 ]
 
 [project.scripts]

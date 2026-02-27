@@ -24,7 +24,19 @@ If you're developing with an IDE, dependencies for this project should be instal
 
 *  Make sure you have the UV package manager installed.
    It's an alternative to tools like pip: https://docs.astral.sh/uv/getting-started/installation/.
-*  Run `uv sync --dev` to install the project's dependencies.
+*  To set up your Databricks Connect development environment, run:
+   ```
+   UV_PROJECT_ENVIRONMENT=.venv_dbc uv sync --group dev
+   ```
+   This creates a `.venv_dbc` directory with all dependencies.
+   
+*  To activate the environment:
+   ```
+   source .venv_dbc/bin/activate  # On macOS/Linux
+   .venv_dbc\Scripts\activate    # On Windows
+   ```
+
+You can also use `UV_PROJECT_ENVIRONMENT=.venv_dbc uv run <command>` to run commands directly without activating the environment.
 
 
 # Using this project using the CLI
