@@ -26,7 +26,7 @@ If you're developing with an IDE, dependencies for this project should be instal
    It's an alternative to tools like pip: https://docs.astral.sh/uv/getting-started/installation/.
 *  To set up your Databricks Connect development environment, run:
    ```
-   UV_PROJECT_ENVIRONMENT=.venv_dbc uv sync --group dbc --group dev
+   UV_PROJECT_ENVIRONMENT=.venv_dbc uv sync --no-dev --group dbc
    ```
    This creates a `.venv_dbc` directory with all databricks connect environment dependencies defined in `pyproject.toml`.
    
@@ -51,6 +51,8 @@ To activate it:
 source .venv_pyspark/bin/activate  # On macOS/Linux
 .venv_pyspark\Scripts\activate   # On Windows
 ```
+
+To add development tools (`pytest`, `ruff`, `ipykernel`, etc.) to either environment, re-run sync with `--group dev`.
 
 
 # Using this project using the CLI

@@ -7,6 +7,9 @@ dependencies = [
     "pandas==3.0.1",
     "numpy==2.4.2",
     "pyarrow==23.0.1",
+    "databricks-sdk==0.94.0",
+    "grpcio==1.78.0",
+    "grpcio-status==1.78.0",
 ]
 
 [dependency-groups]
@@ -21,11 +24,7 @@ dev = [
     "debugpy==1.8.20",
 ]
 pyspark = [
-    "pyspark==4.0.1",
-    "py4j==0.10.9.9",
-    "grpcio==1.78.0",
-    "grpcio-status==1.78.0",
-    "googleapis-common-protos==1.72.0",
+    "pyspark==4.0.0",
 ]
 
 [project.scripts]
