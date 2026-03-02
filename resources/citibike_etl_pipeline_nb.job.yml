@@ -3,7 +3,16 @@ resources:
     citibike_etl_pipeline_nb:
       name: citibike_etl_pipeline_nb
       tasks:
+        - task_key: 00_whl_install
+          python_wheel_task:
+            package_name: dab_project
+            entry_point: main
+          job_cluster_key: d4s_v3_sn
+          libraries:
+            - whl: ../dist/dab_project-*.whl
         - task_key: 01_bronze_citibike
+          depends_on:
+            - task_key: 00_whl_install
           notebook_task:
             notebook_path: ../citibike_etl/notebooks/01_bronze/01_bronze_citibike.ipynb
             base_parameters:
