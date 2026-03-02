@@ -152,6 +152,21 @@ dependencies = [
     { name = "pyarrow" },
 ]
 
+[package.optional-dependencies]
+dbc = [
+    { name = "databricks-connect" },
+]
+dev = [
+    { name = "debugpy" },
+    { name = "ipykernel" },
+    { name = "ipython" },
+    { name = "pytest" },
+    { name = "ruff" },
+]
+pyspark = [
+    { name = "pyspark" },
+]
+
 [package.dev-dependencies]
 dbc = [
     { name = "databricks-connect" },
@@ -169,13 +184,21 @@ pyspark = [
 
 [package.metadata]
 requires-dist = [
+    { name = "databricks-connect", marker = "extra == 'dbc'", specifier = "==17.3" },
     { name = "databricks-sdk", specifier = "==0.94.0" },
+    { name = "debugpy", marker = "extra == 'dev'", specifier = "==1.8.20" },
     { name = "grpcio", specifier = "==1.78.0" },
     { name = "grpcio-status", specifier = "==1.78.0" },
+    { name = "ipykernel", marker = "extra == 'dev'", specifier = "==7.2.0" },
+    { name = "ipython", marker = "extra == 'dev'", specifier = "==9.10.0" },
     { name = "numpy", specifier = "==2.4.2" },
     { name = "pandas", specifier = "==3.0.1" },
     { name = "pyarrow", specifier = "==23.0.1" },
+    { name = "pyspark", marker = "extra == 'pyspark'", specifier = "==4.0.0" },
+    { name = "pytest", marker = "extra == 'dev'", specifier = "==9.0.2" },
+    { name = "ruff", marker = "extra == 'dev'" },
 ]
+provides-extras = ["dbc", "dev", "pyspark"]
 
 [package.metadata.requires-dev]
 dbc = [{ name = "databricks-connect", specifier = "==17.3" }]

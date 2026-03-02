@@ -15,6 +15,8 @@ resources:
             source: WORKSPACE
           job_cluster_key: d4s_v3_sn
         - task_key: 02_silver_citibike
+          libraries:
+            - whl: ../dist/dab_project-*.whl
           depends_on:
             - task_key: 01_bronze_citibike
           notebook_task:

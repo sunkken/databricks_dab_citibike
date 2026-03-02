@@ -9,3 +9,7 @@ scratch/**
 **/explorations/**
 **/!explorations/README.md
 .venv*/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.ipynb_checkpoints/

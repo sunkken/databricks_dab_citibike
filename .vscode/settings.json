@@ -8,7 +8,6 @@
         "**/*.egg-info": true,
         "**/__pycache__": true,
         ".pytest_cache": true,
-        "dist": true,
     },
     "files.associations": {
         "**/.gitkeep": "markdown"
@@ -35,5 +34,7 @@
     "[python]": {
         "editor.defaultFormatter": "charliermarsh.ruff",
         "editor.formatOnSave": true,
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true,
     },
 }

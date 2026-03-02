@@ -17,6 +17,11 @@ variables:
     description: The schema to use
     default: "default"
 
+artifacts:
+  dab_project_whl:
+    type: whl
+    path: .
+
 targets:
   dev:
     # The default target uses 'mode: development' to create a development copy.

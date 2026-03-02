@@ -1,13 +1,6 @@
-import os
 import sys
-
-current_dir = os.getcwd()
-project_root = os.path.abspath(os.path.join(current_dir, "../../../"))
-
-sys.path.append(project_root)
-
-from src.citibike.citibike_utils import get_trip_duration_mins
-from src.utils.datetime_utils import timestamp_to_date_col
+from citibike.citibike_utils import get_trip_duration_mins
+from utils.datetime_utils import timestamp_to_date_col
 from pyspark.sql.functions import create_map, lit
 
 pipeline_id = sys.argv[1]
