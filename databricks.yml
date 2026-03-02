@@ -16,6 +16,9 @@ variables:
   schema:
     description: The schema to use
     default: "default"
+  dev_flag:
+    description: A flag to indicate whether we are in development mode
+    default: true
 
 artifacts:
   dab_project_whl:
@@ -49,6 +52,7 @@ targets:
     variables:
       catalog: citibike_staging
       schema: default
+      dev_flag: false
     permissions:
       - user_name: sunqmasa@gmail.com
         level: CAN_MANAGE
@@ -62,6 +66,7 @@ targets:
     variables:
       catalog: citibike_prod
       schema: default
+      dev_flag: false
     permissions:
       - user_name: sunqmasa@gmail.com
         level: CAN_MANAGE

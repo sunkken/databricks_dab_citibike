@@ -1,0 +1,25 @@
+resources:
+  pipelines:
+    citibike_etl_pipeline_sdp:
+      name: citibike_etl_pipeline
+
+      catalog: "${var.catalog}"
+      schema: "${var.schema}"
+
+      configuration:
+        catalog: "${var.catalog}"
+        schema: "${var.schema}"
+
+      libraries:
+        - notebook:
+            path: ../citibike_etl/sdp/01_bronze/01_bronze_citibike.ipynb
+        - notebook:
+            path: ../citibike_etl/sdp/02_silver/02_silver_citibike.ipynb
+        - notebook:
+            path: ../citibike_etl/sdp/03_gold/03_gold_citibike_daily_ride_summary.ipynb
+        - notebook:
+            path: ../citibike_etl/sdp/03_gold/03_gold_citibike_daily_station_performance.ipynb
+      
+      continuous: false
+      development: "${var.dev_flag}"
+      serverless: true

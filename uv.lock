@@ -144,7 +144,6 @@ name = "dab-project"
 version = "0.0.1"
 source = { editable = "." }
 dependencies = [
-    { name = "databricks-sdk" },
     { name = "grpcio" },
     { name = "grpcio-status" },
     { name = "numpy" },
@@ -185,7 +184,6 @@ pyspark = [
 [package.metadata]
 requires-dist = [
     { name = "databricks-connect", marker = "extra == 'dbc'", specifier = "==17.3" },
-    { name = "databricks-sdk", specifier = "==0.94.0" },
     { name = "debugpy", marker = "extra == 'dev'", specifier = "==1.8.20" },
     { name = "grpcio", specifier = "==1.78.0" },
     { name = "grpcio-status", specifier = "==1.78.0" },
