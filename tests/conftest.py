@@ -1,10 +1,6 @@
 """Configure pytest for local PySpark testing."""
 
 import pytest
-from pyspark.sql import SparkSession
-import pathlib
-import json
-import csv
 import os
 import sys
 
