@@ -11,27 +11,13 @@ dependencies = [
     "grpcio-status==1.78.0",
 ]
 
-[project.optional-dependencies]
-dbc = [
-    "databricks-connect==17.3",
-]
-dev = [
-    "pytest==9.0.2",
-    "ruff",
-    "ipykernel==7.2.0",
-    "ipython==9.10.0",
-    "debugpy==1.8.20",
-]
-pyspark = [
-    "pyspark==4.0.0",
-]
-
 [dependency-groups]
 dbc = [
     "databricks-connect==17.3",
 ]
 dev = [
     "pytest==9.0.2",
+    "pytest-cov",
     "ruff",
     "ipykernel==7.2.0",
     "ipython==9.10.0",

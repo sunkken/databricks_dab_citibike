@@ -48,18 +48,16 @@ UV_PROJECT_ENVIRONMENT=.venv_dbc uv sync --group dbc --group dev
 For a separate local PySpark environment, run:
 
 ```
-UV_PROJECT_ENVIRONMENT=.venv_pyspark uv sync --no-dev --group pyspark
+UV_PROJECT_ENVIRONMENT=.venv_pyspark uv sync --group pyspark --group dev
 ```
 
-This creates `.venv_pyspark` with the local PySpark environment dependencies defined in `pyproject.toml`.
+This creates `.venv_pyspark` with the local PySpark environment dependencies and development dependencies defined in `pyproject.toml`.
 To activate it:
 
 ```
 source .venv_pyspark/bin/activate  # On macOS/Linux
 .venv_pyspark\Scripts\activate   # On Windows
 ```
-
-To add development tools (`pytest`, `ruff`, `ipykernel`, etc.) to either environment, re-run sync with `--group dev`.
 
 
 # Using this project using the CLI
