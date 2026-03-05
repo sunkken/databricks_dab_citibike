@@ -28,7 +28,7 @@ jobs:
 
       - name: Run tests and generate HTML report
         run: |
-          pytest \
+          uv run pytest \
             --disable-warnings \
             --cov=./src \
             --cov-report=html
