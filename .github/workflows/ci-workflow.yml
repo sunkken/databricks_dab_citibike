@@ -24,7 +24,7 @@ jobs:
         uses: astral-sh/setup-uv@v7
 
       - name: Install dependencies (dev and pyspark groups)
-        run: uv sync --group dev --group pyspark
+        run: uv pip install --system -e . --group dev --group pyspark
 
       - name: Run tests and generate HTML report
         run: |
