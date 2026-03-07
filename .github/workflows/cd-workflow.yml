@@ -33,7 +33,7 @@ jobs:
           # write out the profile (here called "STAGING")
           cat <<EOF > ~/.databrickscfg
           [STAGING]
-          host = your-databricks-workspace-url
+          host = https://adb-7405611747908500.0.azuredatabricks.net
           azure_tenant_id = ${{ secrets.AZURE_TENANT_ID }}
           azure_client_id = ${{ secrets.AZURE_CLIENT_ID }}
           azure_client_secret = ${{ secrets.AZURE_CLIENT_SECRET }}
@@ -73,7 +73,7 @@ jobs:
           # write out the profile (here called "PROD")
           cat <<EOF > ~/.databrickscfg
           [PROD]
-          host = your-databricks-workspace-url
+          host = https://adb-7405615833139829.9.azuredatabricks.net/
           azure_tenant_id = ${{ secrets.AZURE_TENANT_ID }}
           azure_client_id = ${{ secrets.AZURE_CLIENT_ID }}
           azure_client_secret = ${{ secrets.AZURE_CLIENT_SECRET }}
