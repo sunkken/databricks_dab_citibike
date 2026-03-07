@@ -56,8 +56,6 @@ targets:
     permissions:
       - service_principal_name: 158eaf9d-73b1-42ff-93de-c1add5b0cc6c
         level: CAN_MANAGE
-    run_as:
-      service_principal_name: 158eaf9d-73b1-42ff-93de-c1add5b0cc6c
 
   prod:
     mode: production
@@ -72,5 +70,3 @@ targets:
     permissions:
       - service_principal_name: 50311e30-9c4b-435b-8fcb-8e75cd4fba20
         level: CAN_MANAGE
-    run_as:
-      service_principal_name: 50311e30-9c4b-435b-8fcb-8e75cd4fba20
